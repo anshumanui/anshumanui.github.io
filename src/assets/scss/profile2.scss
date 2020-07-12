@@ -1,0 +1,265 @@
+
+@import '_mixin';
+
+.cv-profile2 {
+	header {
+		@include titleText;
+
+		h1 {
+			line-height: 0.85;
+			font-family: 'Roboto Condensed';
+			color: $primary2;
+			font-weight: 700;
+
+			&:nth-child(3) {
+				color: $darkest-grey;
+			}
+		}
+
+		h3 {
+			&.cv-roleText {
+				> span {
+					font-family: 'Roboto Condensed';
+					font-weight: 400;
+					background: $primary2;
+					color: $white;
+					padding: {left: 5px; right: 5px;};
+				}
+			}
+		}
+
+		ul {
+			li {
+				div {
+					&:nth-child(1) {
+						width: 35px;
+						height: 35px;
+						border-radius: 50%;
+						background: $lighter-grey;
+
+						img {
+							width: 18px;
+						}
+					}
+				}
+			}
+
+			&.cv-list-bgWhite {
+				li {
+					img {
+						width: 30px;
+					}
+				}
+			}
+		}
+
+		.cv-profileImgHt {
+			height: 368px;
+		}
+
+		.cv-clImgHt {
+			height: 371px;
+		}
+
+		.cv-overlay {
+			background: rgba(0, 206, 201, 0.35);
+			color: $white;
+
+			> h6 {
+				font-family: 'Roboto Condensed';
+			}
+		}
+	}
+
+	section {
+		@include titleText;
+
+		.cv-subTitle {
+			margin-top: 30px;
+
+			&.cv-lineBreak {
+				padding-top: 10px;
+			}
+
+			h5 {
+				> span {
+					background: $darker-grey;
+					color: $white;
+					padding: 1px 5px; 
+				}
+			}
+
+			&:nth-of-type(1) {
+				margin-top: 10px;
+			}
+
+			> div {
+				> div {
+					> img {
+						position: relative;
+						left: -5px;
+					}
+
+					> div {
+						> img {
+							width: 20px;
+						}
+					}
+				}
+			}
+		}
+
+		.cv-skills {
+			margin-top: 25px;
+
+			&.cv-lineBreak {
+				padding-top: 10px;
+			}
+
+			> ul {
+				li {
+					background: $primary2;
+					padding: 1px 4px;
+					color: $white;
+					font-size: 13px;
+					margin-right: 8px;
+				}
+			}
+
+			> h6 {
+				color: $darker-grey;
+			}
+		}
+	}
+
+	footer {
+		@include titleText;
+
+		img {
+			width: 50px;
+		}
+
+		h6 {
+			color: $dark-grey;
+			font-size: 13px;
+		}
+
+		.uk-list {
+			margin-bottom: 0;
+			
+			>li:nth-child(n+2) {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+
+@media print {
+	.cv-profile2 {
+		header {
+			h1 {
+				color: $primary2 !important;
+
+				&:nth-child(3) {
+					color: $darkest-grey !important;
+				}
+			}
+
+			h3 {
+				&.cv-roleText {
+					> span {
+						background: $primary2 !important;
+						color: $white !important;
+					}
+				}
+			}
+
+			ul {
+				li {
+					div {
+						&:nth-child(1) {
+							background: $lighter-grey !important;
+						}
+					}
+				}
+			}
+
+			.cv-overlay {
+				background: rgba(0, 206, 201, 0.35) !important;
+				color: $white !important;
+
+				> h6 {
+					color: $white !important;
+				}
+			}
+		}
+
+		section {
+			h3 {
+				color: $primary2 !important;
+
+				> div {
+					&:nth-child(1) {
+						color: $primary2 !important;
+					}
+
+					&:nth-child(2) {
+						background: $primary2 !important;
+					}
+
+					&:nth-child(3) {
+						background: $primary2 !important;
+					}
+				}
+			}
+
+			.cv-subTitle {
+				h5 {
+					> span {
+						background: $darker-grey !important;
+						color: $white !important;
+					}
+				}
+			}
+
+			.cv-skills {
+				> ul {
+					li {
+						background: $primary2 !important;
+						color: $white !important;
+					}
+				}
+
+				> h6 {
+					color: $darker-grey !important;
+				}
+			}
+		}
+
+		footer {
+			h6 {
+				color: $dark-grey !important;
+			}
+
+			h3 {
+				color: $primary2 !important;
+
+				> div {
+					&:nth-child(1) {
+						color: $primary2 !important;
+					}
+
+					&:nth-child(2) {
+						background: $primary2 !important;
+					}
+
+					&:nth-child(3) {
+						background: $primary2 !important;
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap');
+
+//	Color styles declared here
+$black: #000;
+$darkest-grey: #333;
+$darker-grey: #666;
+$dark-grey: #999;
+$grey: #CCC;
+$light-grey: #DDD;
+$lighter-grey: #EEE;
+$lightest-grey: #F7F7F7;
+$white: #FFF;
+
+$primary: #FD7272;
+$primary2: #00cec9;
+$secondary: #FF9800;
+$secondary2: #f7f1e3;
+
+
+content {
+	display: block;
+}
+
+.cv-letter-spacing {
+	letter-spacing: 2px;
+}
+
+.cv-background {
+	background: $primary2;
+}
+
+.cv-background-muted {
+	background-color: $secondary2;
+}
+
+
+@media print {
+	.uk-background-muted {
+		background-color: #f8f8f8 !important;
+	}
+
+	.cv-background {
+		background: $primary2 !important;
+	}
+
+	.cv-background-muted {
+		background-color: $secondary2 !important;
+	}
+}
+
+a {
+	&:link, &:visited {
+		color: $primary2 !important;
+		text-decoration: none;
+	}
+}
